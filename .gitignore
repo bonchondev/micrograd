@@ -1,1 +1,7 @@
 .ipynb_checkpoints/
+data/
+.env
+env/
+.gitignore
+__pycache__/
+*.log
