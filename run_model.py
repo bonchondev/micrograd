@@ -31,17 +31,10 @@ def loss():
     
     # svm "max-margin" loss
     losses = [(scorei*-yi + 1).relu() for yi, scorei in zip(yb, scores)]
-<<<<<<< HEAD
-    data_loss = sum(losses) * (1.0 / len(losses))
-    # L2 regularization
-    alpha = 1e-4
-    reg_loss = alpha * sum((p*p for p in model.parameters()))
-=======
     data_loss: Value = sum(losses) * (1.0 / len(losses))
     # L2 regularization
     alpha = 1e-4
     reg_loss: Value = alpha * sum((p*p for p in model.parameters()))
->>>>>>> 007410a (new base for other languages)
     total_loss = data_loss + reg_loss
     
     # also get accuracy
@@ -51,10 +44,6 @@ def loss():
 total_loss, acc = loss()
 print(total_loss, acc)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 007410a (new base for other languages)
 # In[7]:
 
 
